@@ -1,9 +1,17 @@
-<template lang="html">
-  <h1>Home</h1>
+<template>
+  <div id="">
+    <main-header title='Home' />
+  </div>
 </template>
 
 <script>
+import MainHeader from '@/components/MainHeader';
+
 export default {
+  components: {
+    'main-header': MainHeader
+  }
+
 }
 </script>
 

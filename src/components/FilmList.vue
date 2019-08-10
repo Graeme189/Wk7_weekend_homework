@@ -1,18 +1,18 @@
 <template lang="html">
   <div id="filmList">
     <ul>
-      <list-component v-for="(film, index) in films" :film="film" :key="index"></list-component>
+      <list-item v-for="(film, index) in films" :film="film" :key="index"></list-item>
     </ul>
   </div>
 </template>
 
 <script>
-import ListComponent from './ListComponent.vue'
+import ListItem from './ListItem.vue'
 export default {
   name: 'film-list',
   props: ['films'],
   components: {
-    "list-component": ListComponent
+    "list-item": ListItem
   }
 }
 </script>
