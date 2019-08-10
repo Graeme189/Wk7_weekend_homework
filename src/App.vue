@@ -3,6 +3,7 @@
     <navbar/>
     <main-header title='Films'></main-header>
       <film-list :films="films"></film-list>
+      <film-detail :film='selectedFilm'></film-detail>
     <router-view :films="films" id="view"></router-view>
   </div>
 </template>
@@ -10,6 +11,7 @@
 <script>
 import { eventBus } from './main.js'
 import FilmList from '@/components/FilmList.vue'
+import FilmDetail from '@/components/FilmDetail.vue'
 import Navbar from '@/components/Navbar.vue'
 import MainHeader from '@/components/MainHeader.vue'
 
@@ -24,7 +26,8 @@ export default {
     components: {
         "film-list": FilmList,
         "navbar": Navbar,
-        "main-header": MainHeader
+        "main-header": MainHeader,
+        "film-detail": FilmDetail
     },
   mounted(){
     fetch('https://ghibliapi.herokuapp.com/films/')

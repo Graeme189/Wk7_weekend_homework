@@ -1,13 +1,7 @@
-<template lang="html">
-  <div v-if="film" id="filmDetail">
-    <div id="detailWrapper">
-      <h2>{{ film.title }}</h2>
-     <div id="flexWrapper">
-        <div id="left">
-          <p><span>Description</span>: {{ film.description }}</p>
-        </div>
-     </div>
-    </div>
+<template>
+  <div v-if='film'>
+    <h3>{{film.title}}</h3>
+    <p>Description: {{film.description}}</p>
   </div>
 </template>
 
